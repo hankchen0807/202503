@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>關於我的大小事</title>
+<style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+    margin: 0;
+    padding: 0;
+    color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+  .navbar {
+    background: rgba(0, 0, 0, 0.8);
+    padding: 15px 0;
+    text-align: right;
+    padding-right: 40px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+    animation: slideIn 0.5s ease-out;
+  }
+  @keyframes slideIn {
+    from { transform: translateY(-100%); }
+    to { transform: translateY(0); }
+  }
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 18px;
+    transition: color 0.3s, transform 0.2s;
+  }
+  .navbar a:hover {
+    color: #ffcc00;
+    transform: scale(1.1);
+  }
+  .container {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(50px);
+    padding: 30px;
+    border-radius: 15px;
+    max-width: 900px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.3);
+    margin-top: 80px;
+  }
+  h1 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  p {
+    font-size: 1.2rem;
+    line-height: 1.8;
+  }
+  .highlight {
+    font-weight: bold;
+    color: #ffcc00;
+  }
+  .photo-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+  }
+  .photo-gallery img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease;
+  }
+  .photo-gallery img:hover {
+    transform: scale(1.05);
+  }
+</style>
+</head>
+<body>
+  <div class="navbar">
+    <a href="d1.html">回首頁</a>
+    <a href="我的生活.html">我的生活</a>
+    <a href="影片展示.html">影片點滴</a>
+    <a href="聯絡我.html">聯絡我</a>
+  </div>
+  <div class="container">
+    <h1>關於我的大小事</h1>
+    <p>嗨！我是 <span class="highlight">陳嘉翰(小陈)</span>，一個熱愛學習、探索與挑戰的人。</p>
+    <p><span class="highlight">目前就讀南台科技大學五專資訊工程系</span></p>
+    <p>我的人生充滿了各種經歷，從求學到興趣，從挑戰到成長，每一個片段都讓我變得更強大。</p>
+    <p>我喜歡嘗試新事物，例如：在火鍋店嘗試服務業這件事。</p>
+    <p>希望能透過這個空間，與大家分享我的故事與成長歷程。</p>
+    <p>以下的照片是一些我的生活照:</p>
+    <div class="photo-gallery">
+      <img src="S__78938126_0.jpg" alt="照片1">
+      <img src="S__78938127_0.jpg" alt="照片2">
+      <img src="S__78938128_0.jpg" alt="照片3">
+      <img src="S__78938129_0.jpg" alt="照片4">
+    </div>
+    <p><span class="highlight">感謝你的來訪！</span> 讓我們一起交流、進步！</p>
+  </div>
+</body>
+</html>

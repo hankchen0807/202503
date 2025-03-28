@@ -1,0 +1,128 @@
+    <title>影片展示頁</title>
+    <style>
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    margin: 0;
+    padding: 0;
+    color: white;
+    overflow-x: hidden;
+}
+        .navbar {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 16px;
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+            padding: 20px 40px;
+            display: flex;
+            gap: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .navbar:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+        }
+        .navbar a {
+            color: #00bcd4;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 20px;
+            transition: color 0.2s, transform 0.2s;
+        }
+        .navbar a:hover {
+            color: #e2e8f0;
+            transform: scale(1.1);
+        }
+        h1 {
+            text-align: center;
+            color: #00bcd4;
+            margin-top: 60px;
+            font-size: 36px;
+        }
+        p {
+            text-align: center;
+            color: #e2e8f0;
+            font-size: 18px;
+            margin: 10px 0 50px;
+        }
+        .gallery-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 15px;
+            padding: 0 20px;
+        }
+        .video-card {
+            background: #1e293b;
+            border: 2px solid #00bcd4;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 255, 255, 0.2);
+            overflow: hidden;
+            transition: transform 0.2s, box-shadow 0.2s;
+        }
+        .video-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 20px rgba(0, 255, 255, 0.4);
+        }
+        video {
+            width: 100%;
+            height: auto;
+        }
+        .video-title {
+            padding: 10px;
+            text-align: center;
+            background: #00bcd4;
+            color: #0f172a;
+            font-size: 18px;
+            font-weight: bold;
+            text-transform: uppercase;
+        }
+        .video-description {
+            padding: 10px;
+            text-align: center;
+            color: #e2e8f0;
+            font-size: 14px;
+            background: #334155;
+            border-top: 1px solid #00bcd4;
+        }
+    </style>
+</head>
+<body>
+    <h1>我的影片展示</h1>
+    <p>這裡展示了我生活中的精彩片段，歡迎觀賞！</p>
+    <div class="gallery-container">
+        <div class="video-card">
+            <video controls>
+                <source src="1.mp4" type="video/mp4">
+            </video>
+            <div class="video-title">轉身就喝醉</div>
+            <div class="video-description">這是我第一次挑戰高空彈跳的瞬間！</div>
+        </div>
+        <div class="video-card">
+            <video controls>
+                <source src="2.mp4" type="video/mp4">
+            </video>
+            <div class="video-title">啊啊啊闖紅燈</div>
+            <div class="video-description">在海邊與朋友們度過的愉快時光。</div>
+        </div>
+        <div class="video-card">
+            <video controls>
+                <source src="5.mp4" type="video/mp4">
+            </video>
+            <div class="video-title">快樂的時候很快樂不開心的時候很痛苦</div>
+            <div class="video-description">一些時候。</div>
+        </div>
+        <div class="video-card">
+            <video controls>
+                <source src="4.mp4" type="video/mp4">
+            </video>
+            <div class="video-title">2024的點點滴滴</div>
+            <div class="video-description">回顧完一切都是過去式！</div>
+        </div>
+    </div>
+</body>
+</html>

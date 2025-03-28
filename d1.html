@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>關於我的人生</title>
+    <style>
+        @keyframes glowing {
+            0% { box-shadow: 0 0 10px #00d4ff; }
+            50% { box-shadow: 0 0 40px #00d4ff, 0 0 20px #fff inset; }
+            100% { box-shadow: 0 0 10px #00d4ff; }
+        }
+        @keyframes fadeInUp {
+            from { opacity: 0; transform: translateY(30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+        }
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            color: white;
+            padding: 40px 20px;
+            box-shadow: 3px 0 20px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            left: 0;
+            top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .sidebar h2 {
+            text-align: center;
+            text-shadow: 0 0 15px #00d4ff;
+            font-size: 2rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .sidebar ul li {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+            font-size: 1.2rem;
+        }
+        .sidebar ul li a:hover {
+            background: #00d4ff;
+            color: #000;
+            transform: scale(1.1);
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 25px #00d4ff;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            left: 150px;
+            backdrop-filter: blur(12px);
+            animation: fadeInUp 1.5s ease-in-out;
+        }
+        h1, h2 {
+            color: #f8f9fa;
+            text-shadow: 0 0 20px #00d4ff;
+        }
+        .instagram-button a {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            color: white;
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        .instagram-button a:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 20px #fcb045;
+        }
+        img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            border: 5px solid #00d4ff;
+            animation: glowing 2s infinite alternate;
+        }
+        p {
+            color: #f1f1f1;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+        .contact-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00d4ff;
+            text-align: center;
+            font-size: 1rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+        .contact-box a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #00d4ff;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+        .contact-box a:hover {
+            background: white;
+            color: #00d4ff;
+        }
+    </style>
+</head>
+<body>
+    <div class="sidebar">
+        <h2>導航</h2>
+        <ul>
+            <li><a href="about me.html">關於我</a></li>
+            <li><a href="我的生活.html">我的生活</a></li>
+            <li><a href="影片展示.html">影片點滴</a></li>
+            <li><a href="聯絡我.html">聯絡我</a></li>
+        </ul>
+    </div>
+    <div class="container">
+        <h1>關於我的人生</h1>
+        <img src="照片.jpg" alt="我的照片">
+        <div class="instagram-button">
+            <a href="https://www.instagram.com/7czhki_" target="_blank">追蹤我的 Instagram</a>
+        </div>
+        <h2>你好，我是 陳嘉翰(小陈)</h2>
+        <p>我是一個熱愛學習、探索與挑戰的人。人生對我來說，是一場不斷突破自己的旅程。</p>
+        <p>我喜歡嘗試新事物，無論是技術學習、創業計畫，還是各種能讓人生更有趣的挑戰。</p>
+        <p>如果你有相同的夢想與熱情，歡迎與我交流，一起成長！</p>
+    </div>
+    <div class="contact-box">
+        <p>有問題嗎？歡迎聯絡我！</p>
+        <a href="聯絡我 copy.html">聯絡我</a>
+    </div>
+</body>
+</html>

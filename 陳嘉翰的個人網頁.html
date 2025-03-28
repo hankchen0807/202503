@@ -1,0 +1,768 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+
+<head>
+    <meta charset="UTF-8">
+    <meta content="width=device-width, initial-scale=1.0" name="viewport">
+    <title>
+        關於我的人生
+    </title>
+    <style>
+        html {
+    scroll-behavior: smooth;
+}
+        @keyframes glowing {
+            0% {
+                box-shadow: 0 0 10px #00d4ff;
+            }
+
+            50% {
+                box-shadow: 0 0 40px #00d4ff, 0 0 20px #fff inset;
+            }
+
+            100% {
+                box-shadow: 0 0 10px #00d4ff;
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: radial-gradient(circle, #0f2027, #203a43, #2c5364);
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            min-height: 100vh;
+            color: white;
+            scroll-behavior: smooth;
+            overflow-y: scroll;
+        }
+
+        .sidebar {
+            width: 280px;
+            height: 100vh;
+            background: rgba(0, 0, 0, 0.6);
+            backdrop-filter: blur(15px);
+            color: white;
+            padding: 40px 20px;
+            box-shadow: 3px 0 20px rgba(0, 0, 0, 0.7);
+            position: fixed;
+            top: 0;
+            right: 0;
+            /* Changed to right */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            animation: fadeInUp 1s ease-in-out;
+            /* Added animation */
+        }
+    .navbar { 
+    position: fixed; /* 固定在畫面上，不隨頁面滾動 */
+    top: 20px;       /* 距離畫面頂部 20px */
+    right: 20px;     /* 距離畫面右側 20px */
+    background: rgba(0, 0, 0, 0.7); /* 半透明黑色背景 */
+    padding: 10px 20px; /* 內邊距（上下 10px，左右 20px） */
+    border-radius: 10px; /* 圓角邊框，讓導覽列更柔和 */
+    box-shadow: 0 0 15px rgba(0, 255, 255, 0.7); /* 藍色霓虹光暈效果 */
+    z-index: 1000; /* 確保導覽列在其他內容上方 */
+}
+
+.navbar ul {
+    display: flex;
+    justify-content: flex-end; /* 讓選單靠右 */
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 15px;
+}
+
+.navbar li {
+    display: inline;
+}
+
+.navbar a {
+    color: #00ffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.navbar a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff;
+}
+
+        .sidebar h2 {
+            text-align: center;
+            text-shadow: 0 0 15px #00d4ff;
+            font-size: 2rem;
+        }
+
+        .sidebar ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .sidebar ul li {
+            margin: 20px 0;
+            text-align: center;
+        }
+
+        .sidebar ul li a {
+            color: white;
+            text-decoration: none;
+            display: block;
+            padding: 15px;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            transition: 0.3s;
+            font-size: 1.2rem;
+        }
+
+        .sidebar ul li a:hover {
+            background:aquamarine;
+            color: #000;
+            transform: scale(1.1);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 50px;
+            border-radius: 20px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.9), 0 0 25px #00d4ff;
+            max-width: 800px;
+            text-align: center;
+            position: relative;
+            left: 150px;
+            backdrop-filter: blur(12px);
+            animation: fadeInUp 1.5s ease-in-out;
+            margin-top: 100px;
+        }
+
+        h1,
+        h2 {
+            color: #f8f9fa;
+            text-shadow: 0 0 20px #00d4ff;
+        }
+
+        .instagram-button a {
+            display: inline-block;
+            padding: 12px 25px;
+            font-size: 1.2rem;
+            color: white;
+            background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+            border: 2px solid white;
+            border-radius: 30px;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .instagram-button a:hover {
+            transform: scale(1.15);
+            box-shadow: 0 0 20px #fcb045;
+        }
+
+        img {
+            width: 160px;
+            height: 160px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-bottom: 20px;
+            animation: glowing 2s infinite alternate;
+        }
+
+        p {
+            color: #f1f1f1;
+            line-height: 1.8;
+            font-size: 1.1rem;
+        }
+
+        .contact-box {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            width: 200px;
+            background: rgba(0, 0, 0, 0.7);
+            color: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 0 15px #00d4ff;
+            text-align: center;
+            font-size: 1rem;
+            animation: fadeInUp 1s ease-in-out;
+        }
+
+        .contact-box a {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 8px 15px;
+            background: #00d4ff;
+            color: black;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: 0.3s;
+        }
+
+        .contact-box a:hover {
+            background: white;
+            color: #00d4ff;
+        }
+        </style>
+<nav class="navbar">
+    <ul>
+        <li><a href="#home">首頁</a></li>
+        <li><a href="#about">關於我的大小事</a></li>
+        <a href="#live" onclick="scrollToLive(event)">我的生活</a>
+        <li><a href="聯絡我.html">聯絡我</a></li>
+    </ul>
+</div>
+</nav>
+    <title>
+        關於我的大小事
+    </title>
+    <title>
+        我的生活 - 科技化展示
+    </title>
+    <title>
+        影片展示頁
+    </title>
+</head>
+<body>
+    <div id="home" class="container">
+        <h1>
+            關於我的人生
+        </h1>
+        <img alt="我的照片" src="%E7%85%A7%E7%89%87.jpg">
+        <div class="instagram-button">
+            <a href="https://www.instagram.com/7czhki_" target="_blank">追蹤我的 Instagram</a>
+        </div>
+
+        <h2>
+            你好，我是 陳嘉翰(小陈)
+        </h2>
+
+        <p>
+            我是一個熱愛學習、探索與挑戰的人。人生對我來說，是一場不斷突破自己的旅程。
+        </p>
+
+        <p>
+            我喜歡嘗試新事物，無論是技術學習、創業計畫，還是各種能讓人生更有趣的挑戰。
+        </p>
+
+        <p>
+            如果你有相同的夢想與熱情，歡迎與我交流，一起成長！
+        </p>
+    </div>
+
+    <div class="contact-box">
+        <p>
+            有問題嗎？歡迎聯絡我！
+        </p>
+        <a href="%E8%81%AF%E7%B5%A1%E6%88%91%20copy.html">聯絡我</a>
+    </div>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(135deg, #0f172a, #1e3a8a, #2563eb);
+            margin: 0;
+            padding: 0;
+            color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            text-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+        }
+
+        .navbar {
+            background: rgba(0, 0, 0, 0.8);
+            padding: 15px 0;
+            text-align: right;
+            padding-right: 40px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            animation: slideIn 0.5s ease-out;
+        }
+
+        @keyframes slideIn {
+            from {
+                transform: translateY(-100%);
+            }
+
+            to {
+                transform: translateY(0);
+            }
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+            transition: color 0.3s, transform 0.2s;
+        }
+
+        .navbar a:hover {
+            color: #ffcc00;
+            transform: scale(1.1);
+        }
+
+        .container {
+            background: rgba(255, 255, 255, 0.2);
+            backdrop-filter: blur(50px);
+            padding: 30px;
+            border-radius: 15px;
+            max-width: 900px;
+            text-align: center;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            margin-top: 80px;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 1.2rem;
+            line-height: 1.8;
+        }
+
+        .highlight {
+            font-weight: bold;
+            color: #ffcc00;
+        }
+
+        .carousel-container {
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+            margin-top: 20px;
+        }
+
+        .carousel {
+            display: flex;
+            transition: transform 0.5s ease;
+        }
+
+        .carousel img {
+            width: 200px;
+            height: 200px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            margin-right: 15px;
+            transition: transform 0.3s ease;
+        }
+
+        .carousel img:hover {
+            transform: scale(1.05);
+        }
+
+        .carousel-buttons {
+            position: absolute;
+            top: 50%;
+            width: 100%;
+            display: flex;
+            justify-content: space-between;
+            transform: translateY(-50%);
+        }
+
+        .carousel-button {
+            background: rgba(0, 0, 0, 0.5);
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            font-size: 20px;
+            transition: background 0.3s;
+        }
+
+        .carousel-button:hover {
+            background: rgba(0, 0, 0, 0.8);
+        }
+        .about-content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.about-text {
+    flex: 1;
+}
+
+.about-photo img {
+    width: 200px; /* 調整圖片大小 */
+    height: auto;
+    border: 5px solid #3498db; /* 設定邊框顏色 */
+    border-radius: 10px; /* 圓角邊框 */
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); /* 加上陰影 */
+}
+    </style>
+<div class="container" id="about">
+    <h1>關於我的大小事</h1>
+    <p>嗨！我是 <span class="highlight">陳嘉翰(小陈)</span>，一個熱愛學習、探索與挑戰的人。</p>
+    <p><span class="highlight">目前就讀南台科技大學五專資訊工程系</span></p>
+    <p>我的人生充滿了各種經歷，從求學到興趣，從挑戰到成長，每一個片段都讓我變得更強大。</p>
+    <p>我喜歡嘗試新事物，例如：在火鍋店嘗試服務業這件事。</p>
+    <p>希望能透過這個空間，與大家分享我的故事與成長歷程。</p>
+
+    <div class="about-photo-container">
+        <div class="about-photo">
+            <img src="南台.jpg" alt="南台科大">
+        </div>
+        <p>以下的照片是一些我的生活照:</p>
+    </div>
+
+    <div class="carousel-container">
+        <div class="carousel">
+            <img alt="照片1" src="S__78938126_0.jpg"> 
+            <img alt="照片2" src="S__78938127_0.jpg"> 
+            <img alt="照片3" src="S__78938128_0.jpg"> 
+            <img alt="照片4" src="S__78938129_0.jpg">
+            <img alt="照片5" src="4.jpg">
+            <img alt="照片7" src="3.jpg">
+            <img alt="照片8" src="2.jpg">
+            <img alt="照片9" src="1.jpg">
+            <img alt="照片10" src="7.jpg">
+            <img alt="照片11" src="8.jpg">
+            <img alt="照片12" src="9.jpg">
+        </div>
+        <p><span class="highlight">感謝你的來訪！</span> 讓我們一起交流、進步！</p>
+        <div class="carousel-buttons">
+            <button class="carousel-button" onclick="moveCarousel(-1)">❮</button>
+            <button class="carousel-button" onclick="moveCarousel(1)">❯</button>
+        </div>
+    </div>
+</div>
+    <script>
+        let currentIndex = 0;
+        const images = document.querySelectorAll('.carousel img');
+        const carousel = document.querySelector('.carousel');
+
+        function moveCarousel(direction) {
+            currentIndex += direction;
+
+            if (currentIndex < 0) {
+                currentIndex = images.length - 1;
+            } else if (currentIndex >= images.length) {
+                currentIndex = 0;
+            }
+
+            const newTransformValue = -currentIndex * (images[0].width + 15); // 15px 是圖片間的間隔
+            carousel.style.transform = `translateX(${newTransformValue}px)`;
+        }
+    </script>
+<style>
+    /* General Body Styles */
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+        margin: 0;
+        padding: 0;
+        color: white;
+        overflow-x: hidden;
+    }
+
+    /* Navbar Styles */
+    .navbar {
+        background: rgba(0, 0, 0, 0.9);
+        padding: 15px 40px;
+        text-align: right;
+        box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        position: fixed;
+        width: 100%;
+        top: 0;
+        z-index: 1000;
+        animation: slideIn 0.5s ease-out;
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-100%);
+        }
+        to {
+            transform: translateY(0);
+        }
+    }
+
+    .navbar a {
+        color: white;
+        text-decoration: none;
+        margin: 0 15px;
+        font-size: 18px;
+        transition: color 0.3s, transform 0.2s;
+        position: relative;
+        white-space: nowrap;
+    }
+
+    .navbar a::after {
+        content: "";
+        display: block;
+        width: 0;
+        height: 2px;
+        transition: width 0.3s;
+        position: absolute;
+        bottom: -5px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .navbar a:hover::after {
+        width: 100%;
+    }
+
+    /* Container Styles */
+    .container {
+        background: rgba(255, 255, 255, 0.1);
+        padding: 40px;
+        border-radius: 15px;
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+        max-width: 1000px;
+        width: 90%;
+        text-align: center;
+        backdrop-filter: blur(10px);
+        margin: 100px auto 0 auto;
+        animation: fadeIn 1s ease-in;
+    }
+
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    /* Header Styles */
+    h1 {
+        color: #66fcf1;
+        text-shadow: 0 0 10px #66fcf1, 0 0 20px #66fcf1;
+    }
+
+    .description {
+        margin: 20px 0;
+        font-size: 1.2rem;
+        line-height: 1.6;
+    }
+
+    /* Instagram Button Styles */
+    .instagram-button a {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        color: white;
+        background: linear-gradient(135deg, #833ab4, #fd1d1d, #fcb045);
+        border: 2px solid white;
+        border-radius: 30px;
+        text-decoration: none;
+        transition: transform 0.2s, box-shadow 0.2s;
+    }
+
+    .instagram-button a:hover {
+        transform: scale(1.1);
+        box-shadow: 0 4px 15px rgba(255, 105, 180, 0.8);
+    }
+
+    /* Image Gallery Styles */
+    .image-gallery {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 5px;
+        margin-top: 5px;
+    }
+
+    .image-item img {
+        border-radius: 0 !important;
+        background: none !important;
+        box-shadow: none !important;
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+    }
+
+    .image-item:hover {
+        transform: scale(1.05);
+    }
+
+    .caption {
+        background: rgba(0, 0, 0, 0.7);
+        color: white;
+        text-align: center;
+        padding: 8px 0;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        opacity: 0;
+        transition: opacity 0.3s;
+    }
+
+    .image-item:hover .caption {
+        opacity: 1;
+    }
+
+    /* Contact Box Styles */
+    .contact-box {
+        position: fixed;
+        left: 20px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 280px;
+        height: 400px;
+        background: rgba(0, 0, 0, 0.8);
+        border-radius: 12px;
+        padding: 15px;
+        backdrop-filter: blur(10px);
+        transition: transform 0.3s ease-in-out;
+        overflow: hidden;
+        z-index: 1000;
+    }
+
+    .contact-box iframe {
+        width: 100%;
+        height: 100%;
+        border: none;
+        border-radius: 8px;
+    }
+    .section {
+    width: 50vw;
+    height: 30vh;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    background:#24243e;
+
+}
+.contact-button {
+    margin-top: 20px;
+    padding: 15px 30px;
+    font-size: 18px;
+    color: #fff;
+    background:#000;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s;
+}
+
+.contact-button:hover {
+    background:#00ffff;
+    transform: scale(1.05);
+}
+
+.contact-button:active {
+    transform: scale(0.95);
+}
+</style>
+
+<div class="contact-box">
+    <iframe src="聯絡我%20copy.html"></iframe>
+</div>
+
+<div class="container" id="live">
+    <h1>我的生活</h1>
+
+    <div class="description">
+        歡迎來到我的生活頁面！這裡展示了我生活中的點滴，包括旅行、美食與各種精彩瞬間。希望你能從這些照片中感受到我的熱情與活力！
+    </div>
+
+    <div class="instagram-button">
+        <a href="https://www.instagram.com/7czhki_" target="_blank">追蹤我的 Instagram</a>
+    </div>
+
+    <div class="image-gallery">
+        <!-- Image Items -->
+        <div class="image-item">
+            <img alt="樂哥旅行團" src="樂哥旅行團.jpg">
+            <div class="caption">樂哥旅行團</div>
+        </div>
+
+        <div class="image-item">
+            <img alt="海底撈美食" src="海底撈.jpg">
+            <div class="caption">海底撈美食</div>
+        </div>
+
+        <div class="image-item">
+            <img alt="漁光島夕陽" src="漁光島.jpg">
+            <div class="caption">漁光島夕陽</div>
+        </div>
+
+        <div class="image-item">
+            <img alt="王功海牛踩蚵車" src="海灘.jpg">
+            <div class="caption">王功海牛踩蚵車</div>
+        </div>
+
+        <div class="image-item">
+            <img alt="基隆彩虹屋" src="S__78938131_0.jpg">
+            <div class="caption">基隆彩虹屋全家福</div>
+        </div>
+
+        <div class="image-item">
+            <img alt="新北野柳" src="S__78938132_0.jpg">
+            <div class="caption">新北野柳</div>
+        </div>
+
+        <div class="image-item">
+            <img alt="這些是我的兄弟姐妹們" src="S__78938134_0.jpg">
+            <div class="caption">這些是我的兄弟姐妹們</div>
+        </div>
+
+        <div class="image-item">
+            <img alt="這些是我的家人們" src="S__78938135_0.jpg">
+            <div class="caption">這些是我的家人們</div>
+        </div>
+
+        <div class="image-item">
+            <img alt="2024鹿耳門路跑" src="大背板.jpg">
+            <div class="caption">2024鹿耳門路跑</div>
+        </div>
+
+        <div class="image-item">
+            <img alt="南投車程搭火車" src="聖誕.jpg">
+            <div class="caption">南投車程搭火車</div>
+        </div>
+    </div>
+    <div class="section">
+        <h2>聯絡我</h2>
+        <p>您可以透過 <a href="mailto:hankchen0807@gmail.com">hankchen0807@gmail.com</a> 聯繫我。</p>
+        <button class="contact-button" onclick="window.open('https://www.instagram.com/7czhki_/', '_blank')">
+            立即私訊聯繫 
+        </button> 
+    </div>    
+<script>
+    // Scroll effect for fade-in sections
+    const fadeInSections = document.querySelectorAll('.fade-in-section');
+    
+    window.addEventListener('scroll', () => {
+        fadeInSections.forEach(section => {
+            const rect = section.getBoundingClientRect();
+            if (rect.top >= 0 && rect.bottom <= window.innerHeight) {
+                section.classList.add('visible');
+            }
+        });
+    });
+</script>
